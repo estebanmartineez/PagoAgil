@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC76EDC4-20B6-4599-B13A-E03CD10702A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PagoAgilFrba</RootNamespace>
+    <AssemblyName>PagoAgilFrba</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbmCliente\ABMClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmCliente\ABMClienteForm.designer.cs">
+      <DependentUpon>ABMClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmCliente\NuevoClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmCliente\NuevoClienteForm.Designer.cs">
+      <DependentUpon>NuevoClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmEmpresa\ABMEmpresaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmEmpresa\ABMEmpresaForm.Designer.cs">
+      <DependentUpon>ABMEmpresaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmEmpresa\IngresoEmpresaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmEmpresa\IngresoEmpresaForm.Designer.cs">
+      <DependentUpon>IngresoEmpresaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmFactura\ABMFacturaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmFactura\ABMFacturaForm.designer.cs">
+      <DependentUpon>ABMFacturaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmFactura\ModificarItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmFactura\ModificarItems.Designer.cs">
+      <DependentUpon>ModificarItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmFactura\ModificarFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmFactura\ModificarFacturas.Designer.cs">
+      <DependentUpon>ModificarFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRol\ABMRolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRol\ABMRolForm.Designer.cs">
+      <DependentUpon>ABMRolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRol\IngresoRolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRol\IngresoRolForm.Designer.cs">
+      <DependentUpon>IngresoRolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmSucursal\ABMSucursalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmSucursal\ABMSucursalForm.Designer.cs">
+      <DependentUpon>ABMSucursalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmSucursal\IngresoSucursalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmSucursal\IngresoSucursalForm.Designer.cs">
+      <DependentUpon>IngresoSucursalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAOs\Listado_EstadisticoDAO.cs" />
+    <Compile Include="DAOs\DevolucionDAO.cs" />
+    <Compile Include="Devolucion\DevolucionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devolucion\DevolucionForm.Designer.cs">
+      <DependentUpon>DevolucionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAOs\Forma_PagoDAO.cs" />
+    <Compile Include="DAOs\RendicionDAO.cs" />
+    <Compile Include="DAOs\ClienteDAO.cs" />
+    <Compile Include="DAOs\PagoDAO.cs" />
+    <Compile Include="DAOs\SucursalDAO.cs" />
+    <Compile Include="DAOs\RubroDAO.cs" />
+    <Compile Include="DAOs\EmpresaDAO.cs" />
+    <Compile Include="DAOs\DBConnection.cs" />
+    <Compile Include="DAOs\FacturaDAO.cs" />
+    <Compile Include="DAOs\FuncionalidadDAO.cs" />
+    <Compile Include="DAOs\RolDAO.cs" />
+    <Compile Include="DAOs\UsuarioDAO.cs" />
+    <Compile Include="Login\MenuPrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\MenuPrincipalForm.Designer.cs">
+      <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoEstadistico\ListadoEstadisticoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoEstadistico\ListadoEstadisticoForm.Designer.cs">
+      <DependentUpon>ListadoEstadisticoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Item_Factura.cs" />
+    <Compile Include="Model\Pago.cs" />
+    <Compile Include="Model\Forma_Pago.cs" />
+    <Compile Include="Model\Devolucion.cs" />
+    <Compile Include="Model\Rendicion.cs" />
+    <Compile Include="Model\Factura.cs" />
+    <Compile Include="Model\Rubro.cs" />
+    <Compile Include="Model\Sucursal.cs" />
+    <Compile Include="Model\Empresa.cs" />
+    <Compile Include="Model\Funcionalidad.cs" />
+    <Compile Include="Model\Rol.cs" />
+    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="PagoAgilFrbaInit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroPago\RegistroPagoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroPago\RegistroPagoForm.Designer.cs">
+      <DependentUpon>RegistroPagoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rendiciones\RendicionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rendiciones\RendicionForm.Designer.cs">
+      <DependentUpon>RendicionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\Utils.cs" />
+    <EmbeddedResource Include="AbmCliente\ABMClienteForm.resx">
+      <DependentUpon>ABMClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmCliente\NuevoClienteForm.resx">
+      <DependentUpon>NuevoClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmEmpresa\ABMEmpresaForm.resx">
+      <DependentUpon>ABMEmpresaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmEmpresa\IngresoEmpresaForm.resx">
+      <DependentUpon>IngresoEmpresaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmFactura\ABMFacturaForm.resx">
+      <DependentUpon>ABMFacturaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmFactura\ModificarItems.resx">
+      <DependentUpon>ModificarItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmFactura\ModificarFacturas.resx">
+      <DependentUpon>ModificarFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\ABMRolForm.resx">
+      <DependentUpon>ABMRolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\IngresoRolForm.resx">
+      <DependentUpon>IngresoRolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmSucursal\ABMSucursalForm.resx">
+      <DependentUpon>ABMSucursalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmSucursal\IngresoSucursalForm.resx">
+      <DependentUpon>IngresoSucursalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Devolucion\DevolucionForm.resx">
+      <DependentUpon>DevolucionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoEstadistico\ListadoEstadisticoForm.resx">
+      <DependentUpon>ListadoEstadisticoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\MenuPrincipalForm.resx">
+      <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegistroPago\RegistroPagoForm.resx">
+      <DependentUpon>RegistroPagoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rendiciones\RendicionForm.resx">
+      <DependentUpon>RendicionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Login\Pago_Agil_Login.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
